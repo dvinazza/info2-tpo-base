@@ -1,0 +1,15 @@
+!SESSION 2015-10-28 09:49:33.869 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_75
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=es_AR
+Command-line arguments:  -os linux -ws gtk -arch x86 -data /home/dvinazza/git/utn/info2/info2-tpo-base
+
+!ENTRY org.eclipse.ui 4 4 2015-10-28 09:49:38.735
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Duplicate id found: org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator
+
+!ENTRY org.eclipse.ui 4 4 2015-10-28 09:49:38.741
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Unknown extension tag found: decorator
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-10-28 10:51:34.712
+!MESSAGE Indexed 'info2-tpo-base' (6 sources, 2 headers) in 0,53 sec: 298 declarations; 303 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
