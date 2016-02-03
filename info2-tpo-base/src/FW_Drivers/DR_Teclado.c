@@ -94,14 +94,7 @@ void TecladoSW (void)
 
 	CodigoActual = TecladoHW ( );
 
-	if ( CodigoActual == NO_KEY )
-	{
-		EstadosEstables = 0;
 
-		CodigoAnterior = NO_KEY;
-
-		return;
-	}
 
 	if ( EstadosEstables == 0 )
 	{
@@ -131,8 +124,10 @@ void TecladoSW (void)
 	}
 
 	if ( EstadosEstables == REBOTES + 1 )
+	{
+		Buff_Key = CodigoActual;
 		return;
-
+	}
 	EstadosEstables++;
 
 	return;

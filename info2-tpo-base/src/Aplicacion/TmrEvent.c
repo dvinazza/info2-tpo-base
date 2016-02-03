@@ -16,16 +16,7 @@ void TmrEvent(void)
 {
 	uint8_t j;
 
-	for(j=0x01; j; j<<=1)
-		switch (Eventos & j)
-		{
-		case 0x01:
-			mensaje=MSJ_STOP;
-			estado_m=PROCESAR;
-			estado_p=ESPERA;
-			Eventos &= ~j;
-			break;
-		}
+
 }
 
 

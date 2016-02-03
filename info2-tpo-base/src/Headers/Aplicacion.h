@@ -34,15 +34,16 @@
 	/****Estados****/
 	#define 	ESPERA 			0
 	#define 	MOVER			1
-	#define 	PROCESAR 		0
-	#define		MOV_AD			1
-	#define 	MOV_ATR			2
-	#define 	MOV_IZQ			3
-	#define 	MOV_DER			4
-	#define 	MANTENER_MOV 	5
+	#define 	PROCESAR 		1
+	#define		MOV_AD			2
+	#define 	MOV_ATR			3
+	#define 	MOV_IZQ			4
+	#define 	MOV_DER			5
+	#define 	MANTENER_MOV 	6
+	#define 	INTERRUPCION	7
 
 	void InicializarKit ( void );
 	void Check_tecla(void);
 	void maquina(void);
-	void mover (uint8_t tecla);
+	void cargar_entradapc(uint8_t * entrada_pc);
 #endif /* APLICACION_H_ */

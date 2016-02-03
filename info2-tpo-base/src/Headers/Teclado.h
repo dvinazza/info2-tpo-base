@@ -42,7 +42,7 @@ void InicTeclado4x1 (void);
 uint8_t TecladoHW ( void );
 void TecladoSW ( void );
 uint8_t GetKey ( void );
-void validar_tecla(uint8_t * tecla);
+void validar_tecla();
 
 
 #endif /* INC_TECLADO_H_ */

@@ -2,12 +2,12 @@
 extern volatile uint8_t t;
 extern volatile uint8_t flagtiempo;
 
-extern volatile uint8_t estado_m;
-
+extern volatile uint8_t estado_p;
+extern volatile uint8_t mensaje;
 void SysTick_Handler (void)
 {
 
-	static uint16_t decimas=400,medioseg=60;
+	static uint16_t decimas=400,medioseg=100;
 	TecladoSW();
 	BarridoDisplay7Seg();
 
@@ -17,10 +17,11 @@ void SysTick_Handler (void)
 			if(!decimas)
 			{
 				decimas = 400;
-				if(estado_m==MANTENER_MOV)
+
+				if(estado_p == MANTENER_MOV)
 				{
 					t--;
-					if(!t) flagtiempo=1;
+					if(!t) flagtiempo=1;//mensaje=MSJ_STOP;
 				}
 				//AnalizarTimer();
 			}
@@ -30,7 +31,7 @@ void SysTick_Handler (void)
 		medioseg--;
 		if(!medioseg)
 		{
-			medioseg=60;
+			medioseg=100;
 			Enviar_Trama();
 
 		}

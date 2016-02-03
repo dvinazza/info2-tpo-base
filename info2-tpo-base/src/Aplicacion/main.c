@@ -27,6 +27,7 @@ volatile uint8_t Buff_Key;				//Buffer de teclado
 volatile uint8_t Buff_Display[DIGITOS];		//Buffer de display
 volatile uint8_t Eventos;
 volatile uint8_t TmrRun[TIMERS];
+volatile uint8_t tecla=NO_KEY;
 
 // globales UART1
 volatile uint8_t bufferTx[TOPE];
@@ -51,17 +52,12 @@ volatile uint8_t enviando0=0;
 
 //globales aplicacion
 volatile uint8_t mensaje=MSJ_STOP;
-volatile uint8_t estado_p;
-volatile uint8_t estado_m;
+volatile uint8_t estado_p=PROCESAR;
 
 
 volatile uint8_t t=0;
 volatile uint8_t flagtiempo=0;
 
-/////////////////////AUXILIAR/////////////////////////
-void teclado_prueba(void);
-uint8_t a=0;
-//////////////////////////////////////////////////////
 int main(void) {
 	InicializarKit();
 
@@ -70,54 +66,9 @@ int main(void) {
 
 
 		 maquina();
-		 //teclado_prueba();
-		 //a=leer_trama();
 
 	 }
 	 return 0 ;
 }
 
 
-
-void teclado_prueba(void)
-{
-	uint8_t tecla,aux;
-	tecla=GetKey();
-	aux =0;
-	switch (tecla)
-	{
-	case SW1:
-		Display(1,2);
-		Enviar_Trama();
-		tecla=NO_KEY;
-		break;
-
-	case SW2:
-
-		if(a==1)
-			Display(15,2);
-		tecla=NO_KEY;
-		break;
-	case SW3:
-		tecla=NO_KEY;
-		aux=PopRx();
-		Display(aux,2);
-		break;
-	case SW4:
-		Display(7,2);
-		break;
-	case SW5:
-		Display(2,2);
-		break;
-	case SW6:
-		Display(4,2);
-		break;
-	case SW7:
-		Display(6,2);
-		break;
-	case SW8:
-		Display(8,2);
-		break;
-
-	}
-}

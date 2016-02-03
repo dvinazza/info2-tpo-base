@@ -12,12 +12,20 @@
 #define 	TOPE		15
 
 // codigos a enviar
-#define		MSJ_STOP  	0x01
-#define		MSJ_AD		0x02
-#define		MSJ_ATR		0x03
-#define		MSJ_DER		0x05
-#define		MSJ_IZQ 	0x04
+#define		MSJ_STOP  	0x02
+#define		MSJ_AD		0x03
+#define		MSJ_ATR		0x04
+#define		MSJ_DER		0x06
+#define		MSJ_IZQ 	0x05
 #define 	MSJ_OBS		0x06
+#define 	MSJ_NOBS	0x07
+
+#define		E_STOP   	49
+#define		E_AD		50
+#define 	E_ATR		51
+#define 	E_IZQ		52
+#define		E_DER		53
+#define		E_RELEASE	54
 
 
 #define CARGA 1
@@ -41,6 +49,8 @@ void InitUART0 (void);
 
 // Funciones Aplicacion
 uint8_t leer_trama(void);
+uint8_t leer_tramaQT(void);
 void Enviar_Trama(void);
+
 
 #endif /* UART_H_ */

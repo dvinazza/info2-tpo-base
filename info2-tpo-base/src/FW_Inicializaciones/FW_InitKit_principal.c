@@ -34,6 +34,7 @@ void InicializarKit ( void )
 	InicLedStick ( );
 	InicEntradaCaptura ( );
 	InitUART1 ();
+	InitUART0();
 	InicializarExp3 ();
 }
 

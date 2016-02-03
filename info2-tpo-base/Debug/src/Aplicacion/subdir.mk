@@ -4,18 +4,21 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../src/Aplicacion/Funciones_APP.c \
 ../src/Aplicacion/TmrEvent.c \
 ../src/Aplicacion/Trama.c \
 ../src/Aplicacion/main.c \
 ../src/Aplicacion/maquina.c 
 
 OBJS += \
+./src/Aplicacion/Funciones_APP.o \
 ./src/Aplicacion/TmrEvent.o \
 ./src/Aplicacion/Trama.o \
 ./src/Aplicacion/main.o \
 ./src/Aplicacion/maquina.o 
 
 C_DEPS += \
+./src/Aplicacion/Funciones_APP.d \
 ./src/Aplicacion/TmrEvent.d \
 ./src/Aplicacion/Trama.d \
 ./src/Aplicacion/main.d \
